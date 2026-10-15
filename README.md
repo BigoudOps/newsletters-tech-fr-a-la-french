@@ -17,4 +17,5 @@ Toutes les contributions sont bienvenues : ajout d'une newsletter, correction d'
 
 ## Licence
 
-Les données de ce répertoire sont dans le domaine public ([CC0 1.0](LICENSE)) : vous pouvez les réutiliser librement, y compris pour construire votre propre site ou outil.
+- **Données** (fiches, thématiques, liste) : [CC BY 4.0](LICENSE). Vous pouvez les réutiliser librement, y compris à des fins commerciales, à condition de citer la source : « [Newsletters tech françaises](https://github.com/numeodev/newsletters-tech-fr), CC BY 4.0 ».
+- **Code** (scripts et workflows) : [MIT](LICENSE-CODE).

@@ -31,7 +31,7 @@ Ne modifiez pas la liste dans le `README.md` : elle est régénérée automatiqu
 ## Format d'une fiche
 
 | Champ | Obligatoire | Description |
-|---|---|---|
+| --- | --- | --- |
 | `nom` | oui | Nom de la newsletter |
 | `url` | oui | Page d'inscription ou d'accueil, en `https://` |
 | `description` | oui | Une phrase, 200 caractères max |
@@ -56,6 +56,10 @@ Vous pouvez proposer votre propre newsletter, c'est même encouragé.
 - Info erronée ou lien mort : [signalez-le](../../issues/new?template=signaler-probleme.yml) ou modifiez directement le fichier concerné.
 - Newsletter arrêtée : ouvrez une pull request qui supprime sa fiche.
 - Nouvelle thématique : proposez-la dans une pull request qui modifie `thematiques.yml`.
+
+## Licence des contributions
+
+En proposant une contribution, vous acceptez qu'elle soit publiée sous la licence du projet : [CC BY 4.0](LICENSE) pour les données, [MIT](LICENSE-CODE) pour le code.
 
 ## Code de conduite
 

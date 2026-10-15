@@ -1,0 +1,74 @@
+name: Proposer une newsletter
+description: Suggérer une newsletter tech française à ajouter au répertoire
+title: "[Ajout] "
+labels: [ajout]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci ! Vérifiez d'abord que la newsletter n'est pas déjà dans la liste et qu'elle respecte les [critères d'inclusion](../blob/main/CONTRIBUTING.md#critères-dinclusion).
+  - type: input
+    id: nom
+    attributes:
+      label: Nom de la newsletter
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL d'inscription
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description en une phrase
+      description: 200 caractères maximum
+    validations:
+      required: true
+  - type: dropdown
+    id: thematiques
+    attributes:
+      label: Thématiques (1 à 3)
+      multiple: true
+      options:
+        - Développement
+        - Web & front-end
+        - DevOps & cloud
+        - Data
+        - Intelligence artificielle
+        - Sécurité
+        - Produit & design
+        - Startups & business
+        - Mobile
+        - Open source
+        - Tech généraliste
+    validations:
+      required: true
+  - type: dropdown
+    id: frequence
+    attributes:
+      label: Fréquence
+      options:
+        - quotidienne
+        - hebdomadaire
+        - bimensuelle
+        - mensuelle
+        - irreguliere
+    validations:
+      required: true
+  - type: input
+    id: auteur
+    attributes:
+      label: Auteur·rice ou organisation (facultatif)
+  - type: checkboxes
+    id: criteres
+    attributes:
+      label: Vérifications
+      options:
+        - label: La newsletter est rédigée en français
+          required: true
+        - label: Elle a publié au moins une édition dans les 6 derniers mois
+          required: true
+        - label: Elle est payante

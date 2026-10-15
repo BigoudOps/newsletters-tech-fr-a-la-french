@@ -1,0 +1,39 @@
+name: Mise à jour du README
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "newsletters/**"
+      - "thematiques.yml"
+      - "scripts/build.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - run: python scripts/build.py generate
+      - name: Commit du README si modifié
+        run: |
+          if git diff --quiet README.md; then
+            echo "README déjà à jour"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: mise à jour automatique de la liste"
+          git push

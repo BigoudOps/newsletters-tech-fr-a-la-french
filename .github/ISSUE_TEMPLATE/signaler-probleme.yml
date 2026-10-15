@@ -1,0 +1,27 @@
+name: Signaler un problème
+description: Lien mort, newsletter arrêtée ou information erronée
+title: "[Correction] "
+labels: [correction]
+body:
+  - type: input
+    id: newsletter
+    attributes:
+      label: Newsletter concernée
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type de problème
+      options:
+        - Lien mort
+        - Newsletter arrêtée
+        - Information erronée
+        - Autre
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Détails
+      description: Ce qui ne va pas et, si possible, la bonne information

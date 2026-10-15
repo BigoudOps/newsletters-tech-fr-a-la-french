@@ -1,0 +1,15 @@
+# Thématiques autorisées dans le champ `thematiques` des fiches.
+# Clé = identifiant utilisé dans les fiches, valeur = titre affiché dans le README.
+# Pour proposer une nouvelle thématique, ouvrez une PR qui modifie ce fichier.
+
+dev: Développement
+web: Web & front-end
+devops: DevOps & cloud
+data: Data
+ia: Intelligence artificielle
+securite: Sécurité
+produit: Produit & design
+startup: Startups & business
+mobile: Mobile
+open-source: Open source
+generaliste: Tech généraliste
